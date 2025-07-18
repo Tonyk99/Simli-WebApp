@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-accent {
+    @apply bg-accent hover:bg-accent/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg shadow-lg p-6 border border-gray-700;
+  }
+  
+  .input-field {
+    @apply bg-surface border border-gray-600 rounded-lg px-4 py-2 text-text placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+  
+  .avatar-container {
+    @apply relative overflow-hidden rounded-lg shadow-2xl;
+  }
+  
+  .pulse-ring {
+    @apply absolute inset-0 rounded-lg border-2 border-primary/50 animate-pulse;
+  }
+  
+  .chat-bubble {
+    @apply max-w-xs lg:max-w-md px-4 py-2 rounded-lg text-sm;
+  }
+  
+  .chat-bubble-user {
+    @apply bg-primary text-white ml-auto;
+  }
+  
+  .chat-bubble-assistant {
+    @apply bg-surface text-text mr-auto border border-gray-600;
+  }
+}
